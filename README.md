@@ -4,7 +4,7 @@ REDCap api polyfill library for Clojure
 
 ## Usage
 
-```
+```clojure
 (require [redcap.webdriver :as rw])
 
 (rw/login)

@@ -5,6 +5,20 @@
             [redcap.webdriver-base :as base]
             [redcap.webdriver-signup :as signup]))
 
+(h/intern-in base/end-driver
+  base/get-driver
+  base/get-env-site
+  base/reset-driver)
+
+(defn get-current
+  []
+  {:site  base/*current-project*
+   :token base/*current-token*})
+
+(defn get-token
+  []
+  base/*current-token*)
+
 (defn login
   "logs in to the site"
   {:added "0.1"}

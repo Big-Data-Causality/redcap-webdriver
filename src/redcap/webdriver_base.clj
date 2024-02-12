@@ -2,9 +2,9 @@
   (:require [std.string :as str]
             [etaoin.api :as e]))
 
-(def ^:dynamic *current-project*)
+(def ^:dynamic *current-project* nil)
 
-(def ^:dynamic *current-token*)
+(def ^:dynamic *current-token* nil)
 
 (defonce +current+
   (atom nil))

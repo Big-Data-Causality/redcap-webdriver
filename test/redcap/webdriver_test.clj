@@ -4,6 +4,13 @@
             [redcap.webdriver-base :as base]
             [std.lib :as h]))
 
+^{:refer redcap.webdriver/get-current :added "0.1"}
+(fact "logs in to the site"
+  ^:hidden
+
+  (main/get-current)
+  => map?)
+
 ^{:refer redcap.webdriver/login :added "0.1"}
 (fact "logs in to the site"
   ^:hidden
