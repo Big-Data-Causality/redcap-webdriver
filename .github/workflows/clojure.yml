@@ -13,23 +13,22 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: Install chrome and chrome driver
+    - name: Install Google Chrome
       run: |
         sudo apt update 
         sudo apt install -y unzip xvfb libxi6 libgconf-2-4
         sudo curl -sS -o - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add 
         sudo bash -c "echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' >> /etc/apt/sources.list.d/google-chrome.list" 
         sudo apt -y update 
-        sudo apt -y install google-chrome-stable 
-        BROWSER_MAJOR=$(google-chrome --version | sed 's/Google Chrome \([0-9]*\).*/\1/g') && \
-          wget https://chromedriver.storage.googleapis.com/LATEST_RELEASE_${BROWSER_MAJOR} -O chrome_version && \
-          wget https://chromedriver.storage.googleapis.com/`cat chrome_version`/chromedriver_linux64.zip && \
+        sudo apt -y install google-chrome-stable
+        google-chrome --version
+    - name: Install Google Chrome Driver
+      run: |
+        BROWSER_VERSION=$(google-chrome --version | sed 's/Google Chrome \([0-9\.]*\)')
+        echo $BROWSER_VERSION
+        wget https://chromedriver.storage.googleapis.com/`echo $BROWSER_VERSION`/chromedriver_linux64.zip && \
           unzip chromedriver_linux64.zip && \
-          mv chromedriver /usr/local/bin/ && \
-        DRIVER_MAJOR=$(chromedriver --version | sed 's/ChromeDriver \([0-9]*\).*/\1/g') && \
-          echo "chrome version: $BROWSER_MAJOR" && \
-          echo "chromedriver version: $DRIVER_MAJOR" && \
-        if [ $BROWSER_MAJOR != $DRIVER_MAJOR ]; then echo "VERSION MISMATCH"; exit 1; fi
+          mv chromedriver /usr/local/bin/
     - name: Install dependencies
       run: lein deps
     - name: Run tests
