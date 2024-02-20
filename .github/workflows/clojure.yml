@@ -14,7 +14,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Install chrome and chrome driver
-      run: apt install chrome chromedriver
+      run: sudo apt install chrome chromedriver
     - name: Install dependencies
       run: lein deps
     - name: Run tests
