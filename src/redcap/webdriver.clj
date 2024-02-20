@@ -118,6 +118,12 @@
                    {:tag :input
                     :name "api_export"})
         _ (e/click driver
+                   {:tag :input
+                    :name "record_rename"})
+        _ (e/click driver
+                   {:tag :input
+                    :name "record_delete"})
+        _ (e/click driver
                    {:xpath "//button[text()='Save Changes']"})
         _ (Thread/sleep 1000)]
     (project-api-enabled? pid opts driver)))
