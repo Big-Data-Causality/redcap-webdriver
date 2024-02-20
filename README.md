@@ -89,7 +89,7 @@ The default env would always be from the `.env-site` file in a project directory
 
 ### Delete Project
 
-```
+```clojure
 (require '[redcap.webdriver :as rw])
 
 (rw/project-delete "56154")
