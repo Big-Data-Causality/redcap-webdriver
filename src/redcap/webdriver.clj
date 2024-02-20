@@ -5,7 +5,8 @@
             [redcap.webdriver-base :as base]
             [redcap.webdriver-signup :as signup]))
 
-(h/intern-in base/end-driver
+(h/intern-in 
+  base/end-driver
   base/get-driver
   base/get-env-site
   base/reset-driver)
