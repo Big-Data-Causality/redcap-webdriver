@@ -27,7 +27,7 @@ jobs:
         BROWSER_VERSION=$(google-chrome --version | sed 's/Google Chrome \([0-9\.]*\).*/\1/g')
         echo $BROWSER_VERSION
         wget https://storage.googleapis.com/chrome-for-testing-public/`echo $BROWSER_VERSION`/linux64/chromedriver-linux64.zip && \
-          unzip chromedriver_linux64.zip && \
+          unzip chromedriver-linux64.zip && \
           mv chromedriver /usr/local/bin/
     - name: Install dependencies
       run: lein deps
