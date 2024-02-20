@@ -7,7 +7,7 @@ REDCap api polyfill library for Clojure using the `etaoin` webdriver library.
 
 ## Usage
 
-### Webdriver Controls
+#### Webdriver Controls
 
 ```clojure
 (require '[redcap.webdriver :as rw])
@@ -19,7 +19,7 @@ REDCap api polyfill library for Clojure using the `etaoin` webdriver library.
 (rw/reset-driver) ;; initialises a new webdriver
 ```
 
-### Environment Controls
+#### Environment Controls
 
 The default env would always be from the `.env-site` file in a project directory
 
@@ -34,7 +34,7 @@ The default env would always be from the `.env-site` file in a project directory
 (rw/get-env-site ".env-custom") ;; reads env from `.env-custom`
 ```
 
-### Signup for a New Email Account
+#### Signup for a New Email Account
 
 ```clojure
 (require '[redcap.webdriver-signup :as signup])
@@ -50,7 +50,7 @@ The default env would always be from the `.env-site` file in a project directory
 ;; => <EMAIL FROM REDCAP PROVIDER WITH NEW ACCOUNT DETAILS>
 ```
 
-### Login
+#### Login
 
 ```clojure
 (require '[redcap.webdriver :as rw])
@@ -65,7 +65,7 @@ The default env would always be from the `.env-site` file in a project directory
 
 ```
 
-### List Projects
+#### List Projects
 
 ```clojure
 (require '[redcap.webdriver :as rw])
@@ -76,8 +76,7 @@ The default env would always be from the `.env-site` file in a project directory
     {:name "Project 002", :pid "56154"}]
 ```
 
-
-### New Project
+#### New Project
 
 ```clojure
 (require '[redcap.webdriver :as rw])
@@ -87,7 +86,18 @@ The default env would always be from the `.env-site` file in a project directory
 ;; => <CREATES NEW PROJECT WITH LOGIN>
 ```
 
-### Delete Project
+#### Project API Token
+
+The token is needed for API access
+
+```clojure
+(require '[redcap.webdriver :as rw])
+
+(rw/project-api-token "56154")
+;; => <API TOKEN>
+```
+
+#### Delete Project
 
 ```clojure
 (require '[redcap.webdriver :as rw])
