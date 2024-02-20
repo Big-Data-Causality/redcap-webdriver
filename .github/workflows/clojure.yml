@@ -28,7 +28,7 @@ jobs:
         echo $BROWSER_VERSION
         wget https://storage.googleapis.com/chrome-for-testing-public/`echo $BROWSER_VERSION`/linux64/chromedriver-linux64.zip && \
           unzip chromedriver-linux64.zip && \
-          mv chromedriver /usr/local/bin/
+          mv chromedriver-linux64/chromedriver /usr/local/bin/
     - name: Install dependencies
       run: lein deps
     - name: Run tests
