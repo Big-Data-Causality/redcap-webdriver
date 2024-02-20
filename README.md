@@ -1,6 +1,6 @@
 # redcap-webdriver
 
-[![Build Status](https://github.com/xyz-zcaudate/redcap-webdriver/actions/workflows/clojure.yml/badge.svg)](https://github.com/xyz-zcaudate/redcap-webdriver/actions)
+[![Build Status](https://github.com/zcaudate-xyz/redcap-webdriver/actions/workflows/clojure.yml/badge.svg)](https://github.com/zcaudate-xyz/redcap-webdriver/actions)
 [![Clojars Project](https://img.shields.io/clojars/v/xyz.zcaudate/redcap-webdriver.svg)](https://clojars.org/xyz.zcaudate/redcap-webdriver)
 
 REDCap api polyfill library for Clojure using the `etaoin` webdriver library.
