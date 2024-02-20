@@ -1,3 +1,6 @@
+# 1. https://tecadmin.net/setup-selenium-chromedriver-on-ubuntu/
+# 2. https://googlechromelabs.github.io/chrome-for-testing/
+
 name: Clojure CI
 
 on:
