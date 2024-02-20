@@ -24,7 +24,7 @@ jobs:
         google-chrome --version
     - name: Install Google Chrome Driver
       run: |
-        BROWSER_VERSION=$(google-chrome --version | sed 's/Google Chrome \([0-9\.]*/\1/g)')
+        BROWSER_VERSION=$(google-chrome --version | sed 's/Google Chrome \([0-9\.]*\).*/\1/g')
         echo $BROWSER_VERSION
         wget https://chromedriver.storage.googleapis.com/`echo $BROWSER_VERSION`/chromedriver_linux64.zip && \
           unzip chromedriver_linux64.zip && \
