@@ -24,6 +24,8 @@ form-init*
 /classes
 /checkouts
 profiles.clj
+.clj-kondo
+.lsp
 pom.xml
 pom.xml.asc
 /.lein-*
