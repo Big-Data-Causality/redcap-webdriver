@@ -1,4 +1,4 @@
-(defproject xyz.zcaudate/redcap-webdriver "0.1.4"
+(defproject xyz.zcaudate/redcap-webdriver "0.1.5"
   :description "redcap api polyfill using webdriver"
   :url "https://github.com/zcaudate-xyz/redcap-webdriver"
   :license  {:name "MIT License"
