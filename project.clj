@@ -1,6 +1,6 @@
-(defproject xyz.zcaudate/redcap-webdriver "0.1.5"
+(defproject com.bigdatacausality/redcap-webdriver "0.1.6"
   :description "redcap api polyfill using webdriver"
-  :url "https://github.com/zcaudate-xyz/redcap-webdriver"
+  :url "https://github.com/Big-Data-Causality/redcap-webdriver"
   :license  {:name "MIT License"
              :url  "http://opensource.org/licenses/MIT"}
   :aliases
